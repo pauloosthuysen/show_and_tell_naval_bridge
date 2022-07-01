@@ -79,19 +79,19 @@
                VerticalOptions="Center" />
 
 
-                <Button Grid.Row="1" Grid.Column="1"
+                <Button x:Name="Button1" Grid.Row="1" Grid.Column="1"
                  Background="Grey" Clicked="Button_Clicked"/>
 
-                <Button Grid.Row="1" Grid.Column="2"
+                <Button x:Name="Button2" Grid.Row="1" Grid.Column="2"
                  Background="Grey" Clicked="Button_Clicked"/>
 
-                <Button Grid.Row="1" Grid.Column="3"
+                <Button x:Name="Button3" Grid.Row="1" Grid.Column="3"
                  Background="Grey" Clicked="Button_Clicked"/>
 
-                <Button Grid.Row="1" Grid.Column="4"
+                <Button x:Name="Button4" Grid.Row="1" Grid.Column="4"
                  Background="Grey" Clicked="Button_Clicked" />
 
-                <Button Grid.Row="1" Grid.Column="5"
+                <Button x:Name="Button5" Grid.Row="1" Grid.Column="5"
                  Background="Grey" Clicked="Button_Clicked"/>
 
 
@@ -104,19 +104,19 @@
                HorizontalOptions="Center"
                VerticalOptions="Center" />
 
-                <Button Grid.Row="2" Grid.Column="1" 
+                <Button x:Name="Button6" Grid.Row="2" Grid.Column="1" 
                  Background="Grey" Clicked="Button_Clicked"/>
 
-                <Button Grid.Row="2" Grid.Column="2"
+                <Button x:Name="Button7" Grid.Row="2" Grid.Column="2"
                  Background="Grey"  Clicked="Button_Clicked"/>
 
-                <Button Grid.Row="2" Grid.Column="3"
+                <Button x:Name="Button8" Grid.Row="2" Grid.Column="3"
                  Background="Grey"  Clicked="Button_Clicked"/>
 
-                <Button Grid.Row="2" Grid.Column="4"
+                <Button x:Name="Button9" Grid.Row="2" Grid.Column="4"
                  Background="Grey"  Clicked="Button_Clicked"/>
 
-                <Button Grid.Row="2" Grid.Column="5"
+                <Button x:Name="Button10" Grid.Row="2" Grid.Column="5"
                  Background="Grey"  Clicked="Button_Clicked"/>
 
 
@@ -129,19 +129,19 @@
                HorizontalOptions="Center"
                VerticalOptions="Center" />
 
-                <Button Grid.Row="3" Grid.Column="1"
+                <Button x:Name="Button11" Grid.Row="3" Grid.Column="1"
                  Background="Grey"  Clicked="Button_Clicked"/>
 
-                <Button Grid.Row="3" Grid.Column="2"
+                <Button x:Name="Button12" Grid.Row="3" Grid.Column="2"
                  Background="Grey" Clicked="Button_Clicked"/>
 
-                <Button Grid.Row="3" Grid.Column="3"
+                <Button x:Name="Button13" Grid.Row="3" Grid.Column="3"
                  Background="Grey" Clicked="Button_Clicked"/>
 
-                <Button Grid.Row="3" Grid.Column="4"
+                <Button x:Name="Button14" Grid.Row="3" Grid.Column="4"
                  Background="Grey" Clicked="Button_Clicked"/>
 
-                <Button Grid.Row="3" Grid.Column="5"
+                <Button x:Name="Button15" Grid.Row="3" Grid.Column="5"
                  Background="Grey" Clicked="Button_Clicked"/>
 
 
@@ -154,20 +154,20 @@
                HorizontalOptions="Center"
                VerticalOptions="Center" />
 
-                <Button Grid.Row="4" Grid.Column="1"
+                <Button x:Name="Button16" Grid.Row="4" Grid.Column="1"
                  Background="Grey" Clicked="Button_Clicked"/>
 
 
-                <Button Grid.Row="4" Grid.Column="2"
+                <Button x:Name="Button17" Grid.Row="4" Grid.Column="2"
                  Background="Grey" Clicked="Button_Clicked"/>
 
-                <Button Grid.Row="4" Grid.Column="3"
+                <Button x:Name="Button18" Grid.Row="4" Grid.Column="3"
                  Background="Grey" Clicked="Button_Clicked"/>
 
-                <Button Grid.Row="4" Grid.Column="4"
+                <Button x:Name="Button19" Grid.Row="4" Grid.Column="4"
                  Background="Grey" Clicked="Button_Clicked"/>
 
-                <Button Grid.Row="4" Grid.Column="5"
+                <Button x:Name="Button20" Grid.Row="4" Grid.Column="5"
                  Background="Grey" Clicked="Button_Clicked"/>
 
 
@@ -180,19 +180,19 @@
                HorizontalOptions="Center"
                VerticalOptions="Center" />
 
-                <Button Grid.Row="5" Grid.Column="1"
+                <Button x:Name="Button21" Grid.Row="5" Grid.Column="1"
                  Background="Grey" Clicked="Button_Clicked"/>
 
-                <Button Grid.Row="5" Grid.Column="2"
+                <Button x:Name="Button22"  Grid.Row="5" Grid.Column="2"
                  Background="Grey" Clicked="Button_Clicked"/>
 
-                <Button Grid.Row="5" Grid.Column="3"
+                <Button x:Name="Button23" Grid.Row="5" Grid.Column="3"
                  Background="Grey" Clicked="Button_Clicked"/>
 
-                <Button Grid.Row="5" Grid.Column="4"
+                <Button x:Name="Button24" Grid.Row="5" Grid.Column="4"
                  Background="Grey" Clicked="Button_Clicked"/>
 
-                <Button Grid.Row="5" Grid.Column="5"
+                <Button x:Name="Button25" Grid.Row="5" Grid.Column="5"
                  Background="Grey" Clicked="Button_Clicked"/>
 
 
@@ -217,6 +217,8 @@
                     <DragGestureRecognizer DragStarting="DragGestureRecognizer_DragStarting_Desk" />
                 </Image.GestureRecognizers>
             </Image>
+
+            <Button Margin="20" Clicked="Button_Clicked_1" WidthRequest="180" Text="Clear"></Button>
 
         </VerticalStackLayout>
     </ScrollView>

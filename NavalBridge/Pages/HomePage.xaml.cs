@@ -51,9 +51,13 @@ public partial class HomePage : ContentPage
 
         if (isHit)
         {
-            clickedButton.Background = Colors.Blue;
+            clickedButton.Background = Colors.White;
+            parentObject.Add(new Image
+            {
+                Source = ImageSource.FromFile("chair.svg")
+            }, columnIndex, rowIndex);
         }
-        else 
+        else
         {
             clickedButton.Background = Colors.Red;
         }
@@ -64,5 +68,36 @@ public partial class HomePage : ContentPage
         //    grdVictims.Children.Remove(border); //remove the entire Border element
         //    grdVictims.RowDefinitions.RemoveAt(rowIndex); //remove the row
         //}
+    }
+
+    private void Button_Clicked_1(object sender, EventArgs e)
+    {
+        Button1.Background = Colors.Gray;
+        Button2.Background = Colors.Gray;
+        Button3.Background = Colors.Gray;
+        Button4.Background = Colors.Gray;
+        Button5.Background = Colors.Gray;
+        Button6.Background = Colors.Gray;
+        Button7.Background = Colors.Gray;
+        Button8.Background = Colors.Gray;
+        Button9.Background = Colors.Gray;
+        Button10.Background = Colors.Gray;
+        Button11.Background = Colors.Gray;
+        Button12.Background = Colors.Gray;
+        Button13.Background = Colors.Gray;
+        Button14.Background = Colors.Gray;
+        Button15.Background = Colors.Gray;
+        Button16.Background = Colors.Gray;
+        Button17.Background = Colors.Gray;
+        Button18.Background = Colors.Gray;
+        Button19.Background = Colors.Gray;
+        Button20.Background = Colors.Gray;
+        Button21.Background = Colors.Gray;
+        Button22.Background = Colors.Gray;
+        Button23.Background = Colors.Gray;
+        Button24.Background = Colors.Gray;
+        Button25.Background = Colors.Gray;
+        _logic = new Logic.Logic();
+        _model = new BoardViewModel(_logic, 5);
     }
 }
