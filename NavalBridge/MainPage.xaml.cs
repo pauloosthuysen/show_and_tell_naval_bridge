@@ -22,6 +22,9 @@ public partial class MainPage : ContentPage
 			CounterBtn.Text = $"Clicked {count} times";
 
 		SemanticScreenReader.Announce(CounterBtn.Text);
+
+		// Test hit functionality
+		model.SetHit('A', 5);
 	}
 }
 

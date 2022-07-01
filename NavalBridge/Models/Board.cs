@@ -15,33 +15,51 @@
                 }
                 startChar++;
             }
+
+            GridItems = gridItemList;
         }
 
         public IEnumerable<GridItem> GridItems { get; set; }
 
-        protected void SetHit(char gridRow, int gridColumn)
+        public void SetHit(char gridRow, int gridColumn)
+        {
+            var grid = GetGridItem(gridRow, gridColumn);
+
+            // Publish hit to backend and get whether or not hit value is true
+            grid.SetHit(true); // TODO: Remove
+        }
+
+        public void SyncroniseHitState(GridItem gridItem)
+        {
+            var existingGridItem = GetGridItem(gridItem.GridRow, gridItem.GridColumn);
+            if (existingGridItem.Hit != gridItem.Hit)
+            {
+                existingGridItem.SetHit(gridItem.Hit);
+            }
+        }
+
+        public void RefreshHitStates()
+        {
+            // TODO: Get some hit states server side (perhaps we standardise the grid item model)
+            var gridItemList = new List<GridItem>();
+
+            foreach (var gridItem in gridItemList)
+            {
+                SyncroniseHitState(gridItem);
+            }
+        }
+
+        private GridItem GetGridItem(char gridRow, int gridColumn)
         {
             var grid = GridItems.Where(x => (x.GridRow == gridRow) && (x.GridColumn == gridColumn)).FirstOrDefault();
 
             if (grid != null)
             {
-                // Publish hit to backend and get whether or not hit value is true
+                return grid;
             }
 
             // Maybe error if grid is out of range?
+            throw new ArgumentOutOfRangeException();
         }
-    }
-
-    public class GridItem
-    {
-        public GridItem(char gridRow, int gridColumn)
-        {
-            GridRow = gridRow;
-            GridColumn = gridColumn;
-        }
-
-        public char GridRow { get; set; }
-        public int GridColumn { get; set; }
-        public bool? Hit { get; set; }   
     }
 }
