@@ -1,12 +1,19 @@
+using Logic;
 using NavalBridge.Models;
 
 namespace NavalBridge.Pages;
 
 public partial class HomePage : ContentPage
 {
+    Logic.Logic _logic;
+    BoardViewModel _model;
+
     public HomePage()
     {
         InitializeComponent();
+
+        _logic = new Logic.Logic();
+        _model = new BoardViewModel(_logic, 5);
     }
 
     private void DropGestureRecognizer_Drop1(object sender, DropEventArgs e)
