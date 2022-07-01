@@ -10,7 +10,10 @@
 
     public class Logic
     {
-        public int[,] grid = new int[10, 10];
+        public const int boardRowSize = 10;
+        public const int boardColSize = 10;
+        public int[,] grid = new int[boardRowSize, boardColSize];
+
         public Dictionary<Desk, int> deskSizes = new()
         {
             { Desk.Desk1, 2 },
@@ -32,14 +35,14 @@
 
         }
 
-        public void PlaceUserShip()
+        public void PlaceUserDesk()
         {
 
         }
 
         public void ResetBoards()
         {
-            grid = new int[10, 10]; 
+            grid = new int[boardRowSize, boardColSize];
         }
     }
 }
