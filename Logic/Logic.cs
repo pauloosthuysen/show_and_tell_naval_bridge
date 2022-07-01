@@ -23,6 +23,15 @@
             { Desk.Desk5, 1 },
         };
 
+        public void Setup()
+        {
+            // blank grid
+
+            // place AI chairs (obfiscated on the FE)
+
+
+        }
+
         public bool DetermineHit(string tileID)
         {
             var coord = MapFromTile(tileID);
