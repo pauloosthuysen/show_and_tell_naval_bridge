@@ -14,6 +14,11 @@ namespace Logic
 
     public class Logic
     {
+        public Logic()
+        {
+            Setup();
+        }
+
         public const int boardRowSize = 5;
         public const int boardColSize = 5;
         public int[,] grid = new int[boardRowSize, boardColSize];
@@ -25,6 +30,7 @@ namespace Logic
             { Desk.Desk4, 1 },
             { Desk.Desk5, 1 },
         };
+        public Coordinate RandomCoordinateValue = new Coordinate(0,0);
 
         public void Setup()
         {
@@ -32,7 +38,10 @@ namespace Logic
 
             // place AI chairs (obfuscated on the FE)
 
-
+            Random random = new Random();
+            var x = random.Next(0, 4);
+            var y = random.Next(0, 4);
+            RandomCoordinateValue = new Coordinate(x, y);
         }
 
         public int tries = 0;
@@ -59,7 +68,10 @@ namespace Logic
             return DetermineHit(coord.X, coord.Y);
         }
 
-        public bool DetermineHit(int xCoordinates, int yCoordinates) => grid[xCoordinates, yCoordinates] == 0;
+        public bool DetermineHit(int xCoordinates, int yCoordinates)
+        {
+            return (xCoordinates == RandomCoordinateValue.X) && (yCoordinates == RandomCoordinateValue.Y);
+        }
  
         public bool PlaceUserDesk(char row, int column)
         {
