@@ -23,7 +23,7 @@
 
         public void ResetBoards()
         {
-
+            grid = new int[10, 10]; 
         }
     }
 }
