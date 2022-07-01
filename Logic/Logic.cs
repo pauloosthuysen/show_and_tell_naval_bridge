@@ -34,7 +34,7 @@ namespace Logic
 
         }
 
-       
+        public int tries = 0;
 
         public static string RandomCoordinate(int? length)
         {
@@ -65,21 +65,48 @@ namespace Logic
             return true;
         }
 
-        public void PlaceDesksAI()
+        public bool PlaceUserDesk(char row, int column)
         {
-            Random rand = new Random();
-            bool verticle = rand.NextDouble() > 0.5;
-
-            //Determines placement verticle / horizontal
+            var coord = MapFromTile($"{row}{column}");
+            if (grid[coord.X, coord.Y] == 0)
+            {
+                grid[coord.X, coord.Y] = 1;
+                return true;
+            }
+            tries++;
+            return false;
         }
 
-        public void PlaceUserDesk()
+
+        public void PlaceDesksAI()
         {
 
+            var i = 0;
+            while (true)
+            {
+                var rand = new Random();
+                var letter = GetLetter();
+                var number = rand.NextInt64(0, 4);
+                if (grid[letter, number] == 0)
+                {
+                    i++;
+                    grid[letter, number] = 1;
+                }
+                if (i == 5) break;
+            }
+        }
+
+        public static char GetLetter()
+        {
+            Random rand = new Random();
+            int num = rand.Next(0, 5);
+            char let = (char)('a' + num);
+            return let;
         }
 
         public void ResetBoards()
         {
+            tries = 0;
             grid = new int[boardRowSize, boardColSize];
         }
 
