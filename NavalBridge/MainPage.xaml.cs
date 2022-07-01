@@ -1,8 +1,11 @@
-﻿namespace NavalBridge;
+﻿using NavalBridge.Models;
+
+namespace NavalBridge;
 
 public partial class MainPage : ContentPage
 {
 	int count = 0;
+    BoardViewModel model = new BoardViewModel(8);
 
 	public MainPage()
 	{
