@@ -23,7 +23,7 @@
             { Desk.Desk5, 6 },
         };
 
-        public bool DetermineHit(string tileID)
+        public bool DetermineHit(int xCoordinates, int yCoordinates)
         {
 
 
