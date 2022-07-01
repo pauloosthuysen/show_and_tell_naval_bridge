@@ -55,6 +55,13 @@
         /// <returns></returns>
         public Coordinate MapFromTile(string tileID)
         {
+            if (tileID == null 
+                    || tileID.Length != 2 
+                    || !Char.IsLetter(tileID[0]) 
+                    || !char.IsNumber(tileID[1]))
+            {
+                throw new Exception($"Invalid tileID {tileID}. Expected e.g. 'A3'");
+            }
             var data = "ABCDEFGHIJ";
             var xId = tileID[0].ToString().ToUpper();
             var x = data.IndexOf(xId);
