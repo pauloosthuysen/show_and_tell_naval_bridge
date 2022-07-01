@@ -59,7 +59,7 @@
             var xId = tileID[0].ToString().ToUpper();
             var x = data.IndexOf(xId);
             var y = Int32.Parse(tileID[1].ToString()) - 1;
-            return new Coordinate { X = x, Y = y };
+            return new Coordinate(x, y);
         }
     }
 }
