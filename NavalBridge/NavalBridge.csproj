@@ -46,6 +46,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\desk.svg" />
+	  <None Remove="Resources\Images\takendesk.svg" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <PackageReference Include="Plugin.ValidationRules" Version="1.5.0.1" />
 	</ItemGroup>
 

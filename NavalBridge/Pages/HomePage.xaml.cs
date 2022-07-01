@@ -4,27 +4,23 @@ namespace NavalBridge.Pages;
 
 public partial class HomePage : ContentPage
 {
-    int count = 0;
-    //BoardViewModel model = new BoardViewModel(8);
-
     public HomePage()
-	{
-		InitializeComponent();
-	}
-
-    private void OnCounterClicked(object sender, EventArgs e)
     {
-        /*count++;
+        InitializeComponent();
+    }
 
-		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
-		else
-			CounterBtn.Text = $"Clicked {count} times";
+    private void DropGestureRecognizer_Drop1(object sender, DropEventArgs e)
+    {
 
-		SemanticScreenReader.Announce(CounterBtn.Text);
-	}*/
+    }
 
-        // Test hit functionality
-        //model.SetHit('A', 5);
+    private void DragGestureRecognizer_DragStarting_Chair(object sender, DragStartingEventArgs e)
+    {
+
+    }
+
+    private void DragGestureRecognizer_DragStarting_Desk(object sender, DragStartingEventArgs e)
+    {
+
     }
 }

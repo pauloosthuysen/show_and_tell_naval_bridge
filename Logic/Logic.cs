@@ -38,10 +38,10 @@ namespace Logic
         {
             const string chars = "ABCDE"; //FGHIJKLMNOPQRSTUVWXYZ
             const string numbers = "01234"; //56789
-            var output1 = new string(Enumerable.Repeat(chars, length).Select(s => s[random.Next(s.Length)]).ToArray());
-            var output2 = new string(Enumerable.Repeat(numbers, length).Select(s => s[random.Next(s.Length)]).ToArray());
+            //var output1 = new string(Enumerable.Repeat(chars, length).Select(s => s[random.Next(s.Length)]).ToArray());
+            //var output2 = new string(Enumerable.Repeat(numbers, length).Select(s => s[random.Next(s.Length)]).ToArray());
 
-            return output1 + output2;
+            return String.Empty;//output1 + output2;
         }
 
         public bool DetermineHit(string tileID)
