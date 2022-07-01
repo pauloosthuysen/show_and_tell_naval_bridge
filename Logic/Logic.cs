@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 
 namespace Logic
 {
@@ -58,13 +59,8 @@ namespace Logic
             return DetermineHit(coord.X, coord.Y);
         }
 
-        public bool DetermineHit(int xCoordinates, int yCoordinates)
-        {
-
-
-            return true;
-        }
-
+        public bool DetermineHit(int xCoordinates, int yCoordinates) => grid[xCoordinates, yCoordinates] == 0;
+ 
         public bool PlaceUserDesk(char row, int column)
         {
             var coord = MapFromTile($"{row}{column}");
