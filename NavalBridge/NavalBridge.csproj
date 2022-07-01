@@ -49,4 +49,11 @@
 	  <PackageReference Include="Plugin.ValidationRules" Version="1.5.0.1" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\Logic\Logic.csproj" />
+	  <MauiXaml Update="Pages\HomePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
 </Project>

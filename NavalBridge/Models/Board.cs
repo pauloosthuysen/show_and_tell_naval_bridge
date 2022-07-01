@@ -2,7 +2,9 @@
 {
     public class BoardViewModel
     {
-        public BoardViewModel(int boardSize)
+        private readonly Logic.Logic _logic;
+
+        public BoardViewModel(Logic.Logic logic, int boardSize)
         {
             var gridItemList = new List<GridItem>();
 
@@ -18,6 +20,7 @@
             }
 
             GridItems = gridItemList;
+            _logic = logic;
         }
 
         public IEnumerable<GridItem> GridItems { get; set; }
@@ -26,8 +29,8 @@
         {
             var grid = GetGridItem(gridRow, gridColumn);
 
-            // TODO: Publish hit to backend and get whether or not hit value is true
-            grid.SetHit(true); // TODO: Remove
+            // Publish hit to backend and get whether or not hit value is true
+            grid.SetHit(_logic.DetermineHit($"{gridRow}{gridColumn}"));
         }
 
         public void SyncroniseHitState(GridItem gridItem)

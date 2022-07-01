@@ -1,31 +1,25 @@
 ﻿using NavalBridge.Models;
+using Logic;
 
 namespace NavalBridge;
 
 public partial class MainPage : ContentPage
 {
 	int count = 0;
-    BoardViewModel model = new BoardViewModel(8);
+    Logic.Logic _logic;
+    BoardViewModel _model;
 
 	public MainPage()
 	{
 		InitializeComponent();
-	}
 
-	private void OnCounterClicked(object sender, EventArgs e)
+        _logic = new Logic.Logic();
+        _model = new BoardViewModel(_logic, 8);
+    }
+
+	private async void Navigate(object sender, EventArgs e)
 	{
-		/*count++;
-
-		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
-		else
-			CounterBtn.Text = $"Clicked {count} times";
-
-		SemanticScreenReader.Announce(CounterBtn.Text);
-	}*/
-
-		// Test hit functionality
-		model.SetHit('A', 5);
-	}
+        await Navigation.PushAsync(new Pages.HomePage());
+    }
 }
 

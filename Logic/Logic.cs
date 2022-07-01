@@ -23,6 +23,12 @@
             { Desk.Desk5, 1 },
         };
 
+        public bool DetermineHit(string tileID)
+        {
+            var coord = MapFromTile(tileID);
+            return DetermineHit(coord.X, coord.Y);
+        }
+
         public bool DetermineHit(int xCoordinates, int yCoordinates)
         {
 
