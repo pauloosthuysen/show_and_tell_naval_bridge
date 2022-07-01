@@ -16,11 +16,11 @@
         public int[,] grid = new int[boardRowSize, boardColSize];
         public Dictionary<Desk, int> deskSizes = new()
         {
-            { Desk.Desk1, 2 },
-            { Desk.Desk2, 3 },
-            { Desk.Desk3, 4 },
-            { Desk.Desk4, 5 },
-            { Desk.Desk5, 6 },
+            { Desk.Desk1, 1 },
+            { Desk.Desk2, 1 },
+            { Desk.Desk3, 1 },
+            { Desk.Desk4, 1 },
+            { Desk.Desk5, 1 },
         };
 
         public bool DetermineHit(int xCoordinates, int yCoordinates)
