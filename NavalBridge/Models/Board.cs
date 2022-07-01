@@ -78,5 +78,11 @@
 
             throw new ArgumentOutOfRangeException($"Grid item '{gridRow}{gridColumn}' does not exist within the grid!");
         }
+
+        public bool IsHit(char gridRow, int gridColumn)
+        {
+            var grid = GetGridItem(gridRow, gridColumn);
+            return grid.Hit ?? false;
+        }
     }
 }
