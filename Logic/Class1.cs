@@ -1,7 +1,12 @@
 ﻿namespace Logic
 {
-    public class Class1
+    public class Logic
     {
+        public bool DetermineHit(string tileID)
+        {
 
+
+            return true;
+        }
     }
 }
