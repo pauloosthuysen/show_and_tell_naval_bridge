@@ -34,8 +34,11 @@ namespace Logic
 
         }
 
+       
+
         public static string RandomCoordinate(int length)
         {
+            Random random = new Random();
             const string chars = "ABCDE"; //FGHIJKLMNOPQRSTUVWXYZ
             const string numbers = "01234"; //56789
             var output1 = new string(Enumerable.Repeat(chars, length).Select(s => s[random.Next(s.Length)]).ToArray());
