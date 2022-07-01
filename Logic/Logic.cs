@@ -116,6 +116,7 @@ namespace Logic
         {
             tries = 0;
             grid = new int[boardRowSize, boardColSize];
+            Setup();
         }
 
         /// <summary>
