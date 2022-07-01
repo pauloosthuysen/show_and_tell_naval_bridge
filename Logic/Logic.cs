@@ -31,11 +31,20 @@ namespace Logic
             // blank grid
 
             // place AI chairs (obfuscated on the FE)
-
+            for(var i = 0; i < 5; i++)
+            {
+                var randomTile = RandomCoordinate(5);
+                PlaceUserDesk(randomTile[0], randomTile[1]);
+            }
 
         }
 
         public int tries = 0;
+
+        public Logic()
+        {
+            Setup();
+        }
 
         public static string RandomCoordinate(int? length)
         {
