@@ -20,6 +20,11 @@ namespace NavalBridge.Models
 
         public void SetHit(bool? hitState)
         {
+            if (Hit != null)
+            {
+                throw new Exception($"Grid '{GridRow}{GridColumn}' has already been checked!");
+            }
+
             Hit = hitState;
         }
     }
