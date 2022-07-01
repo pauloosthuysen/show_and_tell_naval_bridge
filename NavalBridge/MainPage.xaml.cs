@@ -1,8 +1,11 @@
-﻿namespace NavalBridge;
+﻿using NavalBridge.Models;
+
+namespace NavalBridge;
 
 public partial class MainPage : ContentPage
 {
 	int count = 0;
+    BoardViewModel model = new BoardViewModel(8);
 
 	public MainPage()
 	{
@@ -19,6 +22,9 @@ public partial class MainPage : ContentPage
 			CounterBtn.Text = $"Clicked {count} times";
 
 		SemanticScreenReader.Announce(CounterBtn.Text);
+
+		// Test hit functionality
+		model.SetHit('A', 5);
 	}
 }
 
