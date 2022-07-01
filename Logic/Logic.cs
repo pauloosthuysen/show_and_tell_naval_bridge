@@ -54,13 +54,13 @@
         /// </summary>
         /// <param name="tileID"></param>
         /// <returns></returns>
-        public DeskCoord MapFromTile(string tileID)
+        public Coordinate MapFromTile(string tileID)
         {
             var data = "ABCDEFGHIJ";
             var xId = tileID[0].ToString().ToUpper();
             var x = data.IndexOf(xId);
             var y = Int32.Parse(tileID[1].ToString()) - 1;
-            return new DeskCoord { X = x, Y = y };
+            return new Coordinate { X = x, Y = y };
         }
     }
 }
