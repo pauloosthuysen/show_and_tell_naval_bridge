@@ -26,7 +26,7 @@
         {
             var grid = GetGridItem(gridRow, gridColumn);
 
-            // Publish hit to backend and get whether or not hit value is true
+            // TODO: Publish hit to backend and get whether or not hit value is true
             grid.SetHit(true); // TODO: Remove
         }
 
@@ -59,8 +59,7 @@
                 return grid;
             }
 
-            // Maybe error if grid is out of range?
-            throw new ArgumentOutOfRangeException();
+            throw new ArgumentOutOfRangeException($"Grid item '{gridRow}{gridColumn}' does not exist within the grid!");
         }
     }
 }
