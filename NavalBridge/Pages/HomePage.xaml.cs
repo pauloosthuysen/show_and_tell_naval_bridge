@@ -5,7 +5,7 @@ namespace NavalBridge.Pages;
 public partial class HomePage : ContentPage
 {
     int count = 0;
-    BoardViewModel model = new BoardViewModel(8);
+    //BoardViewModel model = new BoardViewModel(8);
 
     public HomePage()
 	{
@@ -25,6 +25,6 @@ public partial class HomePage : ContentPage
 	}*/
 
         // Test hit functionality
-        model.SetHit('A', 5);
+        //model.SetHit('A', 5);
     }
 }
