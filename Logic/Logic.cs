@@ -13,8 +13,8 @@ namespace Logic
 
     public class Logic
     {
-        public const int boardRowSize = 10;
-        public const int boardColSize = 10;
+        public const int boardRowSize = 5;
+        public const int boardColSize = 5;
         public int[,] grid = new int[boardRowSize, boardColSize];
         public Dictionary<Desk, int> deskSizes = new()
         {
