@@ -14,6 +14,7 @@
                     gridItemList.Add(new GridItem(startChar, j));
                 }
                 startChar++;
+
             }
         }
 
