@@ -24,7 +24,7 @@
             { Desk.Desk5, 6 },
         };
 
-        public bool DetermineHit(string tileID)
+        public bool DetermineHit(int xCoordinates, int yCoordinates)
         {
 
 
@@ -33,7 +33,10 @@
 
         public void PlaceDesksAI()
         {
+            Random rand = new Random();
+            bool verticle = rand.NextDouble() > 0.5;
 
+            //Determines placement verticle / horizontal
         }
 
         public void PlaceUserDesk()
