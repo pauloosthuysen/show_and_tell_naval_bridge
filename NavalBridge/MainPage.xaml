@@ -2,40 +2,332 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="NavalBridge.MainPage">
-			 
+
     <ScrollView>
-        <VerticalStackLayout 
-            Spacing="25" 
-            Padding="30,0" 
-            VerticalOptions="Center">
-
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
-                
-            <Label 
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <!--Row 1-->
+            <BoxView Grid.Row="0" Grid.Column="0"
+                 Color="Grey" />
+            <Image Source="Resources/Images/dotnet_bot.svg"></Image>
             
-            <Label 
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
-
-            <Button 
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
-
-        </VerticalStackLayout>
+            
+            <BoxView Grid.Row="0" Grid.Column="1"
+                 Color="White" />
+            <Image Grid.Row="0"  Grid.Column="1" Source="Resources/Images/desk.svg"></Image>
+            
+            <BoxView Grid.Row="0" Grid.Column="2"
+                 Color="Grey" />
+            <Image Grid.Row="0"  Grid.Column="2" Source="Resources/Images/dotnet_bot.svg"></Image>
+            
+            <BoxView Grid.Row="0" Grid.Column="3"
+                 Color="White" />
+            <Image Grid.Row="0"  Grid.Column="3" Source="Resources/Images/dotnet_bot.svg"></Image>
+            
+            <BoxView Grid.Row="0" Grid.Column="4"
+                 Color="Grey" />
+            <Label Grid.Row="0"  Grid.Column="4"
+               Text="A5"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <BoxView Grid.Row="0" Grid.Column="5"
+                 Color="White" />
+            <Label Grid.Row="0"  Grid.Column="5"
+               Text="A6"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <BoxView Grid.Row="0" Grid.Column="6"
+                 Color="Grey" />
+            <Label Grid.Row="0"  Grid.Column="6"
+               Text="A7"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <BoxView Grid.Row="0" Grid.Column="7"
+                 Color="White" />
+            <Label Grid.Row="0"  Grid.Column="7"
+               Text="A8"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <BoxView Grid.Row="0" Grid.Column="8"
+                 Color="Grey" />
+            <Label Grid.Row="0"  Grid.Column="8"
+               Text="A9"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <BoxView Grid.Row="0" Grid.Column="9"
+                 Color="White" />
+            <Label Grid.Row="0"  Grid.Column="9"
+               Text="A10"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <!--Row 2-->
+            <BoxView Grid.Row="1" Grid.Column="0"
+                 Color="White" />
+            <Label Grid.Row="1"  Grid.Column="0"
+               Text="B1"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <BoxView Grid.Row="1" Grid.Column="1"
+                 Color="Grey" />
+            <Label Grid.Row="1"  Grid.Column="1"
+               Text="B2"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <BoxView Grid.Row="1" Grid.Column="2"
+                 Color="White" />
+            <Label Grid.Row="1"  Grid.Column="2"
+               Text="B3"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <BoxView Grid.Row="1" Grid.Column="3"
+                 Color="Grey" />
+            <Label Grid.Row="1"  Grid.Column="3"
+               Text="B4"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <BoxView Grid.Row="1" Grid.Column="4"
+                 Color="White" />
+            <Label Grid.Row="1"  Grid.Column="4"
+               Text="B5"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <BoxView Grid.Row="1" Grid.Column="5"
+                 Color="Grey" />
+            <Label Grid.Row="1"  Grid.Column="5"
+               Text="B6"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <BoxView Grid.Row="1" Grid.Column="6"
+                 Color="White" />
+            <Label Grid.Row="1"  Grid.Column="6"
+               Text="B7"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <BoxView Grid.Row="1" Grid.Column="7"
+                 Color="Grey" />
+            <Label Grid.Row="1"  Grid.Column="7"
+               Text="B8"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <BoxView Grid.Row="1" Grid.Column="8"
+                 Color="White" />
+            <Label Grid.Row="1"  Grid.Column="8"
+               Text="B9"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <BoxView Grid.Row="1" Grid.Column="9"
+                 Color="Grey" />
+            <Label Grid.Row="1"  Grid.Column="9"
+               Text="B10"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <!--Row 3-->
+            <BoxView Grid.Row="2" Grid.Column="0"
+                 Color="Grey" />
+            <Label Grid.Row="2"  Grid.Column="0"
+               Text="C1"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <BoxView Grid.Row="2" Grid.Column="1"
+                 Color="White" />
+            <Label Grid.Row="2"  Grid.Column="1"
+               Text="C2"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <BoxView Grid.Row="2" Grid.Column="2"
+                 Color="Grey" />
+            <Label Grid.Row="2"  Grid.Column="2"
+               Text="C3"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <BoxView Grid.Row="2" Grid.Column="3"
+                 Color="White" />
+            <Label Grid.Row="2"  Grid.Column="3"
+               Text="C4"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <BoxView Grid.Row="2" Grid.Column="4"
+                 Color="Grey" />
+            <Label Grid.Row="2"  Grid.Column="4"
+               Text="C5"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <BoxView Grid.Row="2" Grid.Column="5"
+                 Color="White" />
+            <Label Grid.Row="2"  Grid.Column="5"
+               Text="C6"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <BoxView Grid.Row="2" Grid.Column="6"
+                 Color="Grey" />
+            <Label Grid.Row="2"  Grid.Column="6"
+               Text="C7"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <BoxView Grid.Row="2" Grid.Column="7"
+                 Color="White" />
+            <Label Grid.Row="2"  Grid.Column="7"
+               Text="C8"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <BoxView Grid.Row="2" Grid.Column="8"
+                 Color="Grey" />
+            <Label Grid.Row="2"  Grid.Column="8"
+               Text="C9"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <BoxView Grid.Row="2" Grid.Column="9"
+                 Color="White" />
+            <Label Grid.Row="2"  Grid.Column="9"
+               Text="C10"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <!--Row 4-->
+            <BoxView Grid.Row="3" Grid.Column="0"
+                 Color="White" />
+            <Label Grid.Row="3"  Grid.Column="0"
+               Text="D1"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <BoxView Grid.Row="3" Grid.Column="1"
+                 Color="Grey" />
+            <Label Grid.Row="3"  Grid.Column="1"
+               Text="D2"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <BoxView Grid.Row="3" Grid.Column="2"
+                 Color="White" />
+            <Label Grid.Row="3"  Grid.Column="2"
+               Text="D3"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <BoxView Grid.Row="3" Grid.Column="3"
+                 Color="Grey" />
+            <Label Grid.Row="3"  Grid.Column="3"
+               Text="D4"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <BoxView Grid.Row="3" Grid.Column="4"
+                 Color="White" />
+            <Label Grid.Row="3"  Grid.Column="4"
+               Text="D5"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <BoxView Grid.Row="3" Grid.Column="5"
+                 Color="Grey" />
+            <Label Grid.Row="3"  Grid.Column="5"
+               Text="D6"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <BoxView Grid.Row="3" Grid.Column="6"
+                 Color="White" />
+            <Label Grid.Row="3"  Grid.Column="6"
+               Text="D7"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <BoxView Grid.Row="3" Grid.Column="7"
+                 Color="Grey" />
+            <Label Grid.Row="3"  Grid.Column="7"
+               Text="D8"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <BoxView Grid.Row="3" Grid.Column="8"
+                 Color="White" />
+            <Label Grid.Row="3"  Grid.Column="8"
+               Text="D9"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <BoxView Grid.Row="3" Grid.Column="9"
+                 Color="Grey" />
+            <Label Grid.Row="3"  Grid.Column="9"
+               Text="D10"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <!--Row 5-->
+            <BoxView Grid.Row="4" Grid.Column="0"
+                 Color="Grey" />
+            <Label Grid.Row="4"  Grid.Column="0"
+               Text="E1"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <BoxView Grid.Row="4" Grid.Column="1"
+                 Color="White" />
+            <Label Grid.Row="4"  Grid.Column="1"
+               Text="E2"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <BoxView Grid.Row="4" Grid.Column="2"
+                 Color="Grey" />
+            <Label Grid.Row="4"  Grid.Column="2"
+               Text="E3"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <BoxView Grid.Row="4" Grid.Column="3"
+                 Color="White" />
+            <Label Grid.Row="4"  Grid.Column="3"
+               Text="E4"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <BoxView Grid.Row="4" Grid.Column="4"
+                 Color="Grey" />
+            <Label Grid.Row="4"  Grid.Column="4"
+               Text="E5"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <BoxView Grid.Row="4" Grid.Column="5"
+                 Color="White" />
+            <Label Grid.Row="4"  Grid.Column="5"
+               Text="E6"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <BoxView Grid.Row="4" Grid.Column="6"
+                 Color="Grey"/>
+            <Label Grid.Row="4"  Grid.Column="6"
+               Text="E7"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <BoxView Grid.Row="4" Grid.Column="7"
+                 Color="White" />
+            <Label Grid.Row="4"  Grid.Column="7"
+               Text="E8"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <BoxView Grid.Row="4" Grid.Column="8"
+                 Color="Grey" />
+            <Label Grid.Row="4"  Grid.Column="8"
+               Text="E9"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <BoxView Grid.Row="4" Grid.Column="9"
+                 Color="White" />
+            <Label Grid.Row="4"  Grid.Column="9"
+               Text="E10"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+        </Grid>
     </ScrollView>
  
 </ContentPage>

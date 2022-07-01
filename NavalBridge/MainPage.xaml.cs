@@ -1,24 +1,35 @@
-﻿namespace NavalBridge;
+﻿using System.Drawing;
+
+namespace NavalBridge;
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
+	int columnCount = 5;
+	int rowCount = 5;
+    int[,] grid;
 
 	public MainPage()
 	{
 		InitializeComponent();
+		InitialiseGrid();
 	}
 
-	private void OnCounterClicked(object sender, EventArgs e)
+	private void InitialiseGrid()
 	{
-		count++;
+		grid = new int[5,5];
 
-		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
-		else
-			CounterBtn.Text = $"Clicked {count} times";
+		for(int i = 0; i < rowCount; i++)
+		{
+            for (int k = 0; k < columnCount; k++)
+            {
+				grid[i,k] = i;
+            }
+        }
+    }
 
-		SemanticScreenReader.Announce(CounterBtn.Text);
-	}
+    private void OnCounterClicked(object sender, EventArgs e)
+	{
+       
+    }
 }
 
