@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 
 namespace Logic
 {
@@ -13,8 +14,8 @@ namespace Logic
 
     public class Logic
     {
-        public const int boardRowSize = 10;
-        public const int boardColSize = 10;
+        public const int boardRowSize = 5;
+        public const int boardColSize = 5;
         public int[,] grid = new int[boardRowSize, boardColSize];
         public Dictionary<Desk, int> deskSizes = new()
         {
@@ -34,15 +35,20 @@ namespace Logic
 
         }
 
-       
+        public int tries = 0;
 
-        public static string RandomCoordinate(int length)
+        public static string RandomCoordinate(int? length)
         {
+            if (length == null)
+            {
+                length = 5;
+            }
+
             Random random = new Random();
             const string chars = "ABCDE"; //FGHIJKLMNOPQRSTUVWXYZ
             const string numbers = "01234"; //56789
-            //var output1 = new string(Enumerable.Repeat(chars, length).Select(s => s[random.Next(s.Length)]).ToArray());
-            //var output2 = new string(Enumerable.Repeat(numbers, length).Select(s => s[random.Next(s.Length)]).ToArray());
+            var output1 = new string(Enumerable.Repeat(chars, length.Value).Select(s => s[random.Next(s.Length)]).ToArray());
+            var output2 = new string(Enumerable.Repeat(numbers, length.Value).Select(s => s[random.Next(s.Length)]).ToArray());
 
             return String.Empty;//output1 + output2;
         }
@@ -53,28 +59,50 @@ namespace Logic
             return DetermineHit(coord.X, coord.Y);
         }
 
-        public bool DetermineHit(int xCoordinates, int yCoordinates)
+        public bool DetermineHit(int xCoordinates, int yCoordinates) => grid[xCoordinates, yCoordinates] == 0;
+ 
+        public bool PlaceUserDesk(char row, int column)
         {
-
-
-            return true;
+            var coord = MapFromTile($"{row}{column}");
+            if (grid[coord.X, coord.Y] == 0)
+            {
+                grid[coord.X, coord.Y] = 1;
+                return true;
+            }
+            tries++;
+            return false;
         }
+
 
         public void PlaceDesksAI()
         {
-            Random rand = new Random();
-            bool verticle = rand.NextDouble() > 0.5;
 
-            //Determines placement verticle / horizontal
+            var i = 0;
+            while (true)
+            {
+                var rand = new Random();
+                var letter = GetLetter();
+                var number = rand.NextInt64(0, 4);
+                if (grid[letter, number] == 0)
+                {
+                    i++;
+                    grid[letter, number] = 1;
+                }
+                if (i == 5) break;
+            }
         }
 
-        public void PlaceUserDesk()
+        public static char GetLetter()
         {
-
+            Random rand = new Random();
+            int num = rand.Next(0, 5);
+            char let = (char)('a' + num);
+            return let;
         }
 
         public void ResetBoards()
         {
+            tries = 0;
             grid = new int[boardRowSize, boardColSize];
         }
 
