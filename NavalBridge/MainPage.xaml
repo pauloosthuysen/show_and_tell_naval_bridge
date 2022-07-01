@@ -4,7 +4,7 @@
              x:Class="NavalBridge.MainPage">
 			 
     <ScrollView>
-        <VerticalStackLayout 
+        <!--<VerticalStackLayout 
             Spacing="25" 
             Padding="30,0" 
             VerticalOptions="Center">
@@ -35,7 +35,204 @@
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Center" />
 
-        </VerticalStackLayout>
+        </VerticalStackLayout>-->
+
+
+        <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="60"/>
+            <ColumnDefinition Width="60"/>
+            <ColumnDefinition Width="60"/>
+            <ColumnDefinition Width="60"/>
+            <ColumnDefinition Width="60"/>
+            <ColumnDefinition Width="60"/>
+        </Grid.ColumnDefinitions>
+
+        <!--Column Number-->
+
+        <BoxView Grid.Row="0" Grid.Column="0"
+                 Color="White"/>
+        <Label Grid.Row="0"  Grid.Column="0"
+               Text=""
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+
+        <BoxView Grid.Row="0" Grid.Column="1"
+                 Color="White" />
+        <Label Grid.Row="0"  Grid.Column="1"
+               Text="1"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+
+        <BoxView Grid.Row="0" Grid.Column="2"
+                 Color="White" />
+        <Label Grid.Row="0"  Grid.Column="2"
+               Text="2"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+
+        <BoxView Grid.Row="0" Grid.Column="3"
+                 Color="White" />
+        <Label Grid.Row="0"  Grid.Column="3"
+               Text="3"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+
+        <BoxView Grid.Row="0" Grid.Column="4"
+                 Color="White" />
+        <Label Grid.Row="0"  Grid.Column="4"
+               Text="4"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+
+        <BoxView Grid.Row="0" Grid.Column="5"
+                 Color="White" />
+        <Label Grid.Row="0"  Grid.Column="5"
+               Text="5"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+
+
+        <!--Row 2-->
+
+        <BoxView Grid.Row="1" Grid.Column="0"
+                 Color="White" />
+        <Label Grid.Row="1"  Grid.Column="0"
+               Text="A"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+
+
+        <BoxView Grid.Row="1" Grid.Column="1"
+                 Color="Grey"/>
+            <Image Grid.Row="1" Grid.Column="1"
+                Source="chair.svg"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!" 
+                HorizontalOptions="Center" />
+
+        <BoxView Grid.Row="1" Grid.Column="2"
+                 Color="White" />
+
+        <BoxView Grid.Row="1" Grid.Column="3"
+                 Color="Grey" />
+
+        <BoxView Grid.Row="1" Grid.Column="4"
+                 Color="White" />
+
+        <BoxView Grid.Row="1" Grid.Column="5"
+                 Color="Grey" />
+
+
+        <!--Row 3-->
+
+        <BoxView Grid.Row="2" Grid.Column="0"
+                 Color="White" />
+        <Label Grid.Row="2"  Grid.Column="0"
+               Text="B"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+
+        <BoxView Grid.Row="2" Grid.Column="1"
+                 Color="White" />
+
+        <BoxView Grid.Row="2" Grid.Column="2"
+                 Color="Grey" />
+
+        <BoxView Grid.Row="2" Grid.Column="3"
+                 Color="White" />
+
+        <BoxView Grid.Row="2" Grid.Column="4"
+                 Color="Grey" />
+
+        <BoxView Grid.Row="2" Grid.Column="5"
+                 Color="White" />
+
+
+        <!--Row 4-->
+
+        <BoxView Grid.Row="3" Grid.Column="0"
+                 Color="White" />
+        <Label Grid.Row="3"  Grid.Column="0"
+               Text="C"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+
+        <BoxView Grid.Row="3" Grid.Column="1"
+                 Color="Grey" />
+
+        <BoxView Grid.Row="3" Grid.Column="2"
+                 Color="White" />
+
+        <BoxView Grid.Row="3" Grid.Column="3"
+                 Color="Grey" />
+
+        <BoxView Grid.Row="3" Grid.Column="4"
+                 Color="White" />
+
+        <BoxView Grid.Row="3" Grid.Column="5"
+                 Color="Grey" />
+
+
+        <!--Row 5-->
+
+        <BoxView Grid.Row="4" Grid.Column="0"
+                 Color="White" />
+        <Label Grid.Row="4"  Grid.Column="0"
+               Text="D"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+
+        <BoxView Grid.Row="4" Grid.Column="1"
+                 Color="White" />
+
+
+        <BoxView Grid.Row="4" Grid.Column="2"
+                 Color="Grey" />
+
+        <BoxView Grid.Row="4" Grid.Column="3"
+                 Color="White" />
+
+        <BoxView Grid.Row="4" Grid.Column="4"
+                 Color="Grey" />
+
+        <BoxView Grid.Row="4" Grid.Column="5"
+                 Color="White" />
+
+      
+        <!--Row 4-->
+
+        <BoxView Grid.Row="5" Grid.Column="0"
+                 Color="White" />
+        <Label Grid.Row="5"  Grid.Column="0"
+               Text="E"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+
+        <BoxView Grid.Row="5" Grid.Column="1"
+                 Color="Grey" />
+
+        <BoxView Grid.Row="5" Grid.Column="2"
+                 Color="White" />
+
+        <BoxView Grid.Row="5" Grid.Column="3"
+                 Color="Grey" />
+
+        <BoxView Grid.Row="5" Grid.Column="4"
+                 Color="White" />
+
+        <BoxView Grid.Row="5" Grid.Column="5"
+                 Color="Grey" />
+        
+        
+    </Grid>
     </ScrollView>
  
 </ContentPage>
