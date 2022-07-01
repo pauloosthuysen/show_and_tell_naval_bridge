@@ -25,12 +25,26 @@
 
         public IEnumerable<GridItem> GridItems { get; set; }
 
-        public void SetHit(char gridRow, int gridColumn)
+        public ActionState SetHit(char gridRow, int gridColumn)
         {
-            var grid = GetGridItem(gridRow, gridColumn);
+            try
+            {
+                var grid = GetGridItem(gridRow, gridColumn);
 
-            // Publish hit to backend and get whether or not hit value is true
-            grid.SetHit(_logic.DetermineHit($"{gridRow}{gridColumn}"));
+                // Publish hit to backend and get whether or not hit value is true
+                grid.SetHit(_logic.DetermineHit($"{gridRow}{gridColumn}"));
+
+                return new ActionState() { Success = true };
+            }
+            catch (Exception ex)
+            {
+                var errorList = new List<string>
+                {
+                    $"{ex.Message}"
+                };
+
+                return new ActionState() { Success = false, Errors = errorList };
+            }
         }
 
         public void SyncroniseHitState(GridItem gridItem)
