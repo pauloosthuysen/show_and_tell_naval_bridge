@@ -27,7 +27,7 @@
         {
             // blank grid
 
-            // place AI chairs (obfiscated on the FE)
+            // place AI chairs (obfuscated on the FE)
 
 
         }
