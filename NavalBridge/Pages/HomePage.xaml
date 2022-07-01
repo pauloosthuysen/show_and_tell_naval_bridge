@@ -79,31 +79,20 @@
                VerticalOptions="Center" />
 
 
-                <BoxView Grid.Row="1" Grid.Column="1"
-                 Color="Grey">
-                    <BoxView.GestureRecognizers>
-                        <DropGestureRecognizer AllowDrop="True" Drop="DropGestureRecognizer_Drop1"/>
-                    </BoxView.GestureRecognizers>
-                </BoxView>
+                <Button Grid.Row="1" Grid.Column="1"
+                 Background="Grey" Clicked="Button_Clicked"/>
 
+                <Button Grid.Row="1" Grid.Column="2"
+                 Background="Grey" Clicked="Button_Clicked"/>
 
-                <BoxView Grid.Row="1" Grid.Column="2"
-                 Color="White" />
-                <Image Grid.Row="1" Grid.Column="2"
-        Source="takendesk.png"
-        HorizontalOptions="Center" />
+                <Button Grid.Row="1" Grid.Column="3"
+                 Background="Grey" Clicked="Button_Clicked"/>
 
-                <BoxView Grid.Row="1" Grid.Column="3"
-                 Color="Grey" />
-                <Image Grid.Row="1" Grid.Column="3"
-        Source="desk.png"
-        HorizontalOptions="Center" />
+                <Button Grid.Row="1" Grid.Column="4"
+                 Background="Grey" Clicked="Button_Clicked" />
 
-                <BoxView Grid.Row="1" Grid.Column="4"
-                 Color="White" />
-
-                <BoxView Grid.Row="1" Grid.Column="5"
-                 Color="Grey" />
+                <Button Grid.Row="1" Grid.Column="5"
+                 Background="Grey" Clicked="Button_Clicked"/>
 
 
                 <!--Row 3-->
@@ -115,20 +104,20 @@
                HorizontalOptions="Center"
                VerticalOptions="Center" />
 
-                <BoxView Grid.Row="2" Grid.Column="1"
-                 Color="White" />
+                <Button Grid.Row="2" Grid.Column="1" 
+                 Background="Grey" Clicked="Button_Clicked"/>
 
-                <BoxView Grid.Row="2" Grid.Column="2"
-                 Color="Grey" />
+                <Button Grid.Row="2" Grid.Column="2"
+                 Background="Grey"  Clicked="Button_Clicked"/>
 
-                <BoxView Grid.Row="2" Grid.Column="3"
-                 Color="White" />
+                <Button Grid.Row="2" Grid.Column="3"
+                 Background="Grey"  Clicked="Button_Clicked"/>
 
-                <BoxView Grid.Row="2" Grid.Column="4"
-                 Color="Grey" />
+                <Button Grid.Row="2" Grid.Column="4"
+                 Background="Grey"  Clicked="Button_Clicked"/>
 
-                <BoxView Grid.Row="2" Grid.Column="5"
-                 Color="White" />
+                <Button Grid.Row="2" Grid.Column="5"
+                 Background="Grey"  Clicked="Button_Clicked"/>
 
 
                 <!--Row 4-->
@@ -140,20 +129,20 @@
                HorizontalOptions="Center"
                VerticalOptions="Center" />
 
-                <BoxView Grid.Row="3" Grid.Column="1"
-                 Color="Grey" />
+                <Button Grid.Row="3" Grid.Column="1"
+                 Background="Grey"  Clicked="Button_Clicked"/>
 
-                <BoxView Grid.Row="3" Grid.Column="2"
-                 Color="White" />
+                <Button Grid.Row="3" Grid.Column="2"
+                 Background="Grey" />
 
-                <BoxView Grid.Row="3" Grid.Column="3"
-                 Color="Grey" />
+                <Button Grid.Row="3" Grid.Column="3"
+                 Background="Grey" />
 
-                <BoxView Grid.Row="3" Grid.Column="4"
-                 Color="White" />
+                <Button Grid.Row="3" Grid.Column="4"
+                 Background="Grey" />
 
-                <BoxView Grid.Row="3" Grid.Column="5"
-                 Color="Grey" />
+                <Button Grid.Row="3" Grid.Column="5"
+                 Background="Grey" />
 
 
                 <!--Row 5-->
@@ -165,21 +154,21 @@
                HorizontalOptions="Center"
                VerticalOptions="Center" />
 
-                <BoxView Grid.Row="4" Grid.Column="1"
-                 Color="White" />
+                <Button Grid.Row="4" Grid.Column="1"
+                 Background="Grey" />
 
 
-                <BoxView Grid.Row="4" Grid.Column="2"
-                 Color="Grey" />
+                <Button Grid.Row="4" Grid.Column="2"
+                 Background="Grey" />
 
-                <BoxView Grid.Row="4" Grid.Column="3"
-                 Color="White" />
+                <Button Grid.Row="4" Grid.Column="3"
+                 Background="Grey" />
 
-                <BoxView Grid.Row="4" Grid.Column="4"
-                 Color="Grey" />
+                <Button Grid.Row="4" Grid.Column="4"
+                 Background="Grey" />
 
-                <BoxView Grid.Row="4" Grid.Column="5"
-                 Color="White" />
+                <Button Grid.Row="4" Grid.Column="5"
+                 Background="Grey" />
 
 
                 <!--Row 4-->
@@ -191,20 +180,20 @@
                HorizontalOptions="Center"
                VerticalOptions="Center" />
 
-                <BoxView Grid.Row="5" Grid.Column="1"
-                 Color="Grey" />
+                <Button Grid.Row="5" Grid.Column="1"
+                 Background="Grey" />
 
-                <BoxView Grid.Row="5" Grid.Column="2"
-                 Color="White" />
+                <Button Grid.Row="5" Grid.Column="2"
+                 Background="Grey" />
 
-                <BoxView Grid.Row="5" Grid.Column="3"
-                 Color="Grey" />
+                <Button Grid.Row="5" Grid.Column="3"
+                 Background="Grey" />
 
-                <BoxView Grid.Row="5" Grid.Column="4"
-                 Color="White" />
+                <Button Grid.Row="5" Grid.Column="4"
+                 Background="Grey" />
 
-                <BoxView Grid.Row="5" Grid.Column="5"
-                 Color="Grey" />
+                <Button Grid.Row="5" Grid.Column="5"
+                 Background="Grey" />
 
 
             </Grid>
