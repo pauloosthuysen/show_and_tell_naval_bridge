@@ -1,6 +1,7 @@
 ﻿namespace Logic
 {
-    public enum Desk {
+    public enum Desk
+    {
         Desk1,
         Desk2,
         Desk3,
@@ -46,6 +47,20 @@
         public void ResetBoards()
         {
             grid = new int[boardRowSize, boardColSize];
+        }
+
+        /// <summary>
+        /// Gets the coords from the tile ID e.g. A1 -> (0,0); B4 -> (1, 3)
+        /// </summary>
+        /// <param name="tileID"></param>
+        /// <returns></returns>
+        public Coordinate MapFromTile(string tileID)
+        {
+            var data = "ABCDEFGHIJ";
+            var xId = tileID[0].ToString().ToUpper();
+            var x = data.IndexOf(xId);
+            var y = Int32.Parse(tileID[1].ToString()) - 1;
+            return new Coordinate { X = x, Y = y };
         }
     }
 }
