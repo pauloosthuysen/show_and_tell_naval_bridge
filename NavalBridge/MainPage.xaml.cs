@@ -17,20 +17,9 @@ public partial class MainPage : ContentPage
         _model = new BoardViewModel(_logic, 8);
     }
 
-	private void OnCounterClicked(object sender, EventArgs e)
+	private async void Navigate(object sender, EventArgs e)
 	{
-        /*count++;
-
-		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
-		else
-			CounterBtn.Text = $"Clicked {count} times";
-
-		SemanticScreenReader.Announce(CounterBtn.Text);
-	}*/
-
-        // Test hit functionality
-        _model.SetHit('A', 5);
-	}
+        await Navigation.PushAsync(new Pages.HomePage());
+    }
 }
 
