@@ -32,7 +32,10 @@
 
         public void PlaceDesksAI()
         {
+            Random rand = new Random();
+            bool verticle = rand.NextDouble() > 0.5;
 
+            //Determines placement verticle / horizontal
         }
 
         public void PlaceUserDesk()
