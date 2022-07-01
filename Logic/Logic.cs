@@ -68,7 +68,7 @@
             {
                 throw new Exception($"Invalid tileID {tileID}. Expected e.g. 'A3'");
             }
-            var data = "ABCDEFGHIJ";
+            var data = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
             var xId = tileID[0].ToString().ToUpper();
             var x = data.IndexOf(xId);
             var y = Int32.Parse(tileID[1].ToString()) - 1;
