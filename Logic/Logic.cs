@@ -1,4 +1,6 @@
-﻿namespace Logic
+﻿using System;
+
+namespace Logic
 {
     public enum Desk
     {
@@ -30,6 +32,16 @@
             // place AI chairs (obfuscated on the FE)
 
 
+        }
+
+        public static string RandomCoordinate(int length)
+        {
+            const string chars = "ABCDE"; //FGHIJKLMNOPQRSTUVWXYZ
+            const string numbers = "01234"; //56789
+            var output1 = new string(Enumerable.Repeat(chars, length).Select(s => s[random.Next(s.Length)]).ToArray());
+            var output2 = new string(Enumerable.Repeat(numbers, length).Select(s => s[random.Next(s.Length)]).ToArray());
+
+            return output1 + output2;
         }
 
         public bool DetermineHit(string tileID)
